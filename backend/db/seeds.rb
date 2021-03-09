@@ -7,5 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 10.times do 
-    Album.create(name: Faker::Music.album, artist: Faker::Music.band, format: "Vynil", condition: "Sealed", description: "Repressing", price: rand() * 100)
+    Genre.create(name: Faker::Music.genre)
+end 
+
+Album.all.each do |a|
+    a.update(genre: Genre.all.sample(1)[0]) 
 end 
