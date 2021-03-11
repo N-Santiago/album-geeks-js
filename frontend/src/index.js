@@ -6,7 +6,7 @@ const init = () => {
 };
   
 const getAlbums = () => {
-fetch("http://localhost:3000/albums")
+fetch(BASE_URL+"/albums")
     .then((res) => res.json())
     .then((data) => renderAlbums(data));
 }
