@@ -1,7 +1,5 @@
 class Album < ApplicationRecord
-    belongs_to :genre 
+    belongs_to :category, optional: true 
 
-    # def genre_name
-    #     self.genre.name
-    # end 
+
 end

@@ -11,7 +11,7 @@
         <h1>Album Geeks</h1>
     </div>
     
-    <div id="form">
+    <div id="form-container">
         <h3>Add Album</h3>
         <form id="new-album">
             <label>Title:</label>
@@ -20,12 +20,8 @@
             <input type="text" id="artist">
             <label>Genre:</label>
             <input type='text' id='genre'><br><br>
-            <label>Format:</label>
-            <select name="format" id="format">
-                <option value="vynil">Vynil</option>
-                <option value="cd">CD</option>
-                <option value="cassette">Cassette</option>    
-            </select>
+            <label>Description:</label>
+            <input type="text" id="description" size="50"><br><br>
             <label>Condition:</label>
             <select name="condition" id="condition">
                 <option value="sealed">Sealed</option>
@@ -37,9 +33,7 @@
                 <option value="good">Good (G)</option>
                 <option value="fair">Fair (F)</option>
                 <option value="poor">Poor (P)</option>          
-            </select><br><br>
-            <label>Description:</label>
-            <input type="text" id="description" size="50">
+            </select>
             <label>Price:</label>
             <input type='number' id='price'><br><br>
             <input type="submit" value="Submit">

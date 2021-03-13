@@ -11,7 +11,6 @@ class AlbumsController < ApplicationController
     end 
 
     def create
-        # binding.pry
         album = Album.new(album_params)
         if album.save
           render json: album
@@ -23,7 +22,7 @@ class AlbumsController < ApplicationController
     private
 
     def album_params
-        params.require(:album).permit(:name, :artist, :format, :condition, :description, :price, :genre_id)
+        params.require(:album).permit(:name, :artist, :genre, :condition, :description, :price)
     end
     
 end

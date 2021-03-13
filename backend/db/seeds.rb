@@ -1,3 +1,4 @@
+require 'faker'
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -6,10 +7,14 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-10.times do 
-    Genre.create(name: Faker::Music.genre)
+categories = ['Vynil', 'CD', 'Cassette']
+
+categories.each do |c|
+    Category.create(name: c)
 end 
 
+#update albums with their category_id
 Album.all.each do |a|
-    a.update(genre: Genre.all.sample(1)[0]) 
+    a.update(category: Category.all.sample(1)[0]) 
 end 
+

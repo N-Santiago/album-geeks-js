@@ -18,16 +18,16 @@ ActiveRecord::Schema.define(version: 2021_03_07_183417) do
   create_table "albums", force: :cascade do |t|
     t.string "name"
     t.string "artist"
-    t.string "format"
+    t.string "genre"
     t.string "condition"
     t.string "description"
     t.integer "price"
-    t.integer "genre_id"
+    t.integer "category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "genres", force: :cascade do |t|
+  create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

@@ -19,7 +19,7 @@ const renderAlbums = function (albums) {
         <div>
             <h3>${album.name}<br>
             by ${album.artist}</h3>
-            <p>Format: ${album.format}<br>
+            <p>Genre: ${album.genre}<br>
             Condition: ${album.condition}<br>
             Description: ${album.description}<br>
             Price: ${formatPrice(album.price)}</p>
@@ -47,7 +47,7 @@ function submitAlbum(data) {
         <div>
             <h3>${album.name}<br>
             by ${album.artist}</h3>
-            <p>Format: ${album.format}<br>
+            <p>Genre: ${album.genre}<br>
             Condition: ${album.condition}<br>
             Description: ${album.description}<br>
             Price: ${formatPrice(album.price)}</p>
@@ -59,19 +59,16 @@ function submitAlbum(data) {
 function bindAlbumFormEventListener() {
     albumForm.addEventListener("submit", function(e) {
         e.preventDefault()
-        // const formData = new formData(e.target)
         const name = document.getElementById("name").value
         const artist = document.getElementById("artist").value
-        const format = document.getElementById("format").value
-        const genre_id = document.getElementById("genre").value
+        const genre = document.getElementById("genre").value
         const condition = document.getElementById("condition").value
         const description = document.getElementById("description").value
         const price = document.getElementById("price").value;
         const data = {
             name,
             artist,
-            genre_id,
-            format,
+            genre,
             condition,
             description,
             price,
