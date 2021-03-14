@@ -1,6 +1,6 @@
 const BASE_URL = "http://localhost:3000";
 const albumEl = document.getElementById("album-list")
-const albumForm = document.getElementById("new-album")
+const albumForm = document.getElementById("form-container")
 
 const init = () => {
     getAlbums();
@@ -10,27 +10,30 @@ const init = () => {
 const getAlbums = () => {
 fetch(BASE_URL+"/albums")
     .then((res) => res.json())
-    .then((data) => renderAlbums(data));
+    .then((data) => {
+        data.forEach(albumObject => {
+            const newAlbum = new Album(albumObject)
+            albumEl.innerHTML += newAlbum.renderAlbumsIndex()
+        })
+    })
 }
 
-const renderAlbums = function (albums) {
-    albums.forEach((album) => {
-        albumEl.innerHTML += `
-        <div>
-            <h3>${album.name}<br>
-            by ${album.artist}</h3>
-            <p>Genre: ${album.genre}<br>
-            Condition: ${album.condition}<br>
-            Description: ${album.description}<br>
-            Price: ${formatPrice(album.price)}</p>
-        </div>
-        `;    
-    });
-};
 
-function formatPrice(price) {
-    return `$${price}`;
-}
+
+// const renderAlbums = function (albums) {
+//     albums.forEach((album) => {
+//         albumEl.innerHTML += `
+//         <div>
+//             <h3>${album.name}<br>
+//             by ${album.artist}</h3>
+//             <p>Genre: ${album.genre}<br>
+//             Condition: ${album.condition}<br>
+//             Description: ${album.description}<br>
+//             Price: ${formatPrice(album.price)}</p>
+//         </div>
+//         `;    
+//     });
+// };
 
 function submitAlbum(data) {
     fetch(BASE_URL+"/albums", {
@@ -41,18 +44,10 @@ function submitAlbum(data) {
         },
         body: JSON.stringify({ album: data }),
     })
-    .then((res) => res.json)
+    .then((res) => res.json())
     .then((album) => {
-        albumEl.innerHTML += `
-        <div>
-            <h3>${album.name}<br>
-            by ${album.artist}</h3>
-            <p>Genre: ${album.genre}<br>
-            Condition: ${album.condition}<br>
-            Description: ${album.description}<br>
-            Price: ${formatPrice(album.price)}</p>
-        </div>
-        `;    
+        const newAlbum = new Album(album)
+        albumEl.innerHTML += newAlbum.renderAlbumsIndex() 
     }) 
 }
 
