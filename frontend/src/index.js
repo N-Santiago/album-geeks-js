@@ -1,24 +1,35 @@
 const BASE_URL = "http://localhost:3000";
+const mainListEl = document.getElementById("main-list");
+const mainListTitleEl = document.getElementById("main-list-title");
 const albumEl = document.getElementById("album-list")
 const albumForm = document.getElementById("form-container")
+const albumsNavEl = document.getElementById("albums-nav");
+const categoriesNavEl = document.getElementById("categories-nav");
 
 const init = () => {
     getAlbums();
     bindAlbumFormEventListener();
+    bindNavListeners();
 };
   
 const getAlbums = () => {
-fetch(BASE_URL+"/albums")
+    mainListEl.innerHTML = "<strong>Loading the albums...</strong>";
+    fetch(BASE_URL+"/albums")
     .then((res) => res.json())
     .then((data) => {
+        mainListEl.innerHTML = "";
+        mainListTitleEl.innerHTML = "<strong>Albums</strong>";
         data.forEach(albumObject => {
             const newAlbum = new Album(albumObject)
-            albumEl.innerHTML += newAlbum.renderAlbumsIndex()
+            mainListEl.innerHTML += newAlbum.renderAlbumsIndex()
         })
     })
 }
 
-
+const getCategories = () => {
+    mainListTitleEl.innerHTML = "<strong>Categories</strong>";
+    mainListEl.innerHTML = "<strong>Loading...</strong>";
+}
 
 // const renderAlbums = function (albums) {
 //     albums.forEach((album) => {
@@ -47,7 +58,7 @@ function submitAlbum(data) {
     .then((res) => res.json())
     .then((album) => {
         const newAlbum = new Album(album)
-        albumEl.innerHTML += newAlbum.renderAlbumsIndex() 
+        mainListEl.innerHTML += newAlbum.renderAlbumsIndex() 
     }) 
 }
 
@@ -70,6 +81,11 @@ function bindAlbumFormEventListener() {
         };
         submitAlbum(data)
     })
+}
+
+function bindNavListeners() {
+    albumsNavEl.addEventListener("click", getAlbums);
+    categoriesNavEl.addEventListener("click", getCategories);
 }
 
 // Have to call init in order to get what I'm calling inside of it. 
