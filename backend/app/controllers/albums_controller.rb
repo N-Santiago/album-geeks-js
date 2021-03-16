@@ -19,6 +19,14 @@ class AlbumsController < ApplicationController
         end
     end
 
+    def destroy
+        album = Album.find(params[:id])
+
+        if album.destroy
+            render json: { id: album.id }
+        end
+    end 
+
     private
 
     def album_params

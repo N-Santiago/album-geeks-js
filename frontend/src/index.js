@@ -23,7 +23,21 @@ const getAlbums = () => {
             const newAlbum = new Album(albumObject)
             mainListEl.innerHTML += newAlbum.renderAlbumsIndex()
         })
+        document 
+            .querySelectorAll(".delete-btn")
+            .forEach((btn) => btn.addEventListener("click", deleteAlbum))
     })
+}
+
+function deleteAlbum(e) {
+    const { id } = e.target.dataset
+    fetch(`http://localhost:3000/albums/${id}`, {
+        method: "DELETE"
+    })
+    .then((res) => res.json())
+    .then((data) => {
+        e.target.parentElement.remove();
+    });
 }
 
 const getCategories = () => {

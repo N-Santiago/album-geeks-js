@@ -1,3 +1,3 @@
 class AlbumSerializer < ActiveModel::Serializer
-  attributes :name, :artist, :genre, :condition, :description, :price
+  attributes :id, :name, :artist, :genre, :condition, :description, :price
 end
