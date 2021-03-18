@@ -34,6 +34,8 @@ const getAlbums = () => {
 }
 
 function showAlbumDetails(e) {
+    e.preventDefault()
+    console.log('showing album details')
     const { id } = e.target.dataset;
     fetch(`http://localhost:3000/albums/${id}`)
       .then((res) => res.json())
@@ -87,6 +89,7 @@ function submitAlbum(data) {
     .then((album) => {
         const newAlbum = new Album(album)
         mainListEl.innerHTML += newAlbum.renderAlbumsIndex() 
+       init()
     }) 
 }
 
