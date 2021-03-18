@@ -5,6 +5,7 @@ const albumEl = document.getElementById("album-list")
 const albumForm = document.getElementById("form-container")
 const albumsNavEl = document.getElementById("albums-nav");
 const categoriesNavEl = document.getElementById("categories-nav");
+const albumDetailEl = document.getElementById("album-details")
 
 const init = () => {
     getAlbums();
@@ -18,16 +19,29 @@ const getAlbums = () => {
     .then((res) => res.json())
     .then((data) => {
         mainListEl.innerHTML = "";
-        mainListTitleEl.innerHTML = "<strong>Albums</strong>";
+        mainListTitleEl.innerHTML = "<h2>Albums</h2>";
         data.forEach(albumObject => {
             const newAlbum = new Album(albumObject)
             mainListEl.innerHTML += newAlbum.renderAlbumsIndex()
         })
+        document
+            .querySelectorAll(".album-link")
+            .forEach((link) => link.addEventListener("click", showAlbumDetails));
         document 
             .querySelectorAll(".delete-btn")
             .forEach((btn) => btn.addEventListener("click", deleteAlbum))
     })
 }
+
+function showAlbumDetails(e) {
+    const { id } = e.target.dataset;
+    fetch(`http://localhost:3000/albums/${id}`)
+      .then((res) => res.json())
+      .then((album) => {
+        const newAlbum = new Album(album);
+        albumDetailEl.innerHTML = newAlbum.renderAlbumDetail();
+      });
+  }
 
 function deleteAlbum(e) {
     const { id } = e.target.dataset
@@ -41,7 +55,7 @@ function deleteAlbum(e) {
 }
 
 const getCategories = () => {
-    mainListTitleEl.innerHTML = "<strong>Categories</strong>";
+    mainListTitleEl.innerHTML = "<h2>Categories</h2>";
     mainListEl.innerHTML = "<strong>Loading...</strong>";
 }
 

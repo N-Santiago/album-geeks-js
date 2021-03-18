@@ -14,18 +14,25 @@ class Album {
         return `$${this.price}`;
     }
 
+    renderAlbumDetail() {
+        return `
+        <div>
+            <h3>Album Description:</h3>
+            <strong>${this.name}<br>
+            by ${this.artist}</strong>
+            <p>Genre: ${this.genre}<br>
+            Condition: ${this.condition}<br>
+            Description: ${this.description}<br>
+            Price: ${this.formatPrice()}</p>
+        </div>
+        `
+    }
+
     renderAlbumsIndex() {
         return `
             <div>
-                <h3>${this.name}<br>
-                by ${this.artist}</h3>
-                <button data-id=${
-                    this.id
-                  } type="button" class="delete-btn hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">X</button>
-                <p>Genre: ${this.genre}<br>
-                Condition: ${this.condition}<br>
-                Description: ${this.description}<br>
-                Price: ${this.formatPrice()}</p>
+                <a  href="#"><h3 data-id=${this.id} class="text-sm font-medium hover:text-gray-400 album-link">${this.name}<br>
+                by ${this.artist}</h3></a><button data-id=${this.id} type="button" class="delete-btn hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">X</button>
             </div>
         `
     } 
