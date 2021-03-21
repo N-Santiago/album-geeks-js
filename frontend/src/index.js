@@ -57,24 +57,24 @@ function deleteAlbum(e) {
 }
 
 const getCategories = () => {
-    mainListTitleEl.innerHTML = "<h2>Categories</h2>";
     mainListEl.innerHTML = "<strong>Loading...</strong>";
+    fetch(BASE_URL+"/categories")
+    .then((res) => res.json())
+    .then((data) => {
+        mainListEl.innerHTML = "";
+        mainListTitleEl.innerHTML = "<h2>Categories</h2>";
+        data.forEach(categoryObject => {
+            const newCat = new Category(categoryObject)
+            mainListEl.innerHTML += newCat.renderCategories()
+        })
+        document
+            .querySelectorAll(".album-link")
+            .forEach((link) => link.addEventListener("click", showAlbumDetails));
+        document 
+            .querySelectorAll(".delete-btn")
+            .forEach((btn) => btn.addEventListener("click", deleteAlbum))
+    })
 }
-
-// const renderAlbums = function (albums) {
-//     albums.forEach((album) => {
-//         albumEl.innerHTML += `
-//         <div>
-//             <h3>${album.name}<br>
-//             by ${album.artist}</h3>
-//             <p>Genre: ${album.genre}<br>
-//             Condition: ${album.condition}<br>
-//             Description: ${album.description}<br>
-//             Price: ${formatPrice(album.price)}</p>
-//         </div>
-//         `;    
-//     });
-// };
 
 function submitAlbum(data) {
     fetch(BASE_URL+"/albums", {
@@ -88,7 +88,7 @@ function submitAlbum(data) {
     .then((res) => res.json())
     .then((album) => {
         const newAlbum = new Album(album)
-        mainListEl.innerHTML += newAlbum.renderAlbumsIndex() 
+        mainListEl.innerHTML += newAlbum.renderAlbumsIndex()
        init()
     }) 
 }
@@ -99,6 +99,7 @@ function bindAlbumFormEventListener() {
         const name = document.getElementById("name").value
         const artist = document.getElementById("artist").value
         const genre = document.getElementById("genre").value
+        const category_id = document.getElementById("category_id").value
         const condition = document.getElementById("condition").value
         const description = document.getElementById("description").value
         const price = document.getElementById("price").value;
@@ -106,6 +107,7 @@ function bindAlbumFormEventListener() {
             name,
             artist,
             genre,
+            category_id,
             condition,
             description,
             price,
