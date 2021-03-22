@@ -20,4 +20,4 @@ The gem is available as open source under the terms of the MIT License.
 Code of Conduct
 Everyone interacting in the album geeks project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the code of conduct.
 
-© 2020 Small Reviews
+© 2021 Album Geeks
