@@ -1,0 +1,11 @@
+{
+    "scripts": {
+        "build-css": "tailwindcss build index.css"
+    },
+    "dependencies": {
+        "tailwindcss": "^2.0.4"
+    },
+    "devDependencies": {
+        "stylelint-config-recommended": "^4.0.0"
+    }
+}

@@ -17,4 +17,15 @@ class Category {
             </div>
         `
     } 
+
+    // renderAlbums() {
+    //     this.albums.forEach(album => {
+    //         mainListEl().innerHTML += `
+    //         <div>
+    //         <li id="album-${album.id}">
+    //         ${album.name} - ${album.artist} - Genre: ${album.genre}</small><button class="delete-btn" data-action="delete" id="delete-btn"> X </button></li>
+    //         </div>
+    //         `
+    //     })
+    // }
 }
