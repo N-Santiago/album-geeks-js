@@ -11,7 +11,7 @@ class Album {
     }
     
     formatPrice() {
-        return `$${this.price}`;
+        return `$${this.price.toFixed(2)}`;
     }
 
     renderAlbumDetail() {
