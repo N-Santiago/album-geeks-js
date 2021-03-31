@@ -8,38 +8,38 @@
     <link rel="stylesheet" href="public/styles.css">
 </head>
 <body>
-    <div id="heading">
+    <div id="heading" class="font-bold text-xl p-4">
         <h1>Album Geeks</h1>
     </div>
 
     <div id="nav-container">
-        <a href="#" id="albums-nav">
+        <a href="#" id="albums-nav" class="font-medium hover:text-gray-400">
             Albums
         </a> |
-        <a href="#" id="categories-nav">
+        <a href="#" id="categories-nav" class="font-medium hover:text-gray-400">
             Categories
         </a>
     </div>
     
-    <div id="form-container">
-        <h3>Add Album</h3>
+    <div id="form-container" class="p-1 mt-2 border-2 rounded-sm">
+        <h3 class="font-bold">Add Album</h3>
         <form id="new-album">
             <label>Title:</label>
-            <input type="text" id="name">
+            <input type="text" id="name" class="border-2 rounded-sm border-gray-500">
             <label>Artist:</label>
-            <input type="text" id="artist">
+            <input type="text" id="artist" class="border-2 rounded-sm border-gray-500">
             <label>Genre:</label>
-            <input type='text' id='genre'><br><br>
+            <input type='text' id='genre' class="border-2 rounded-sm border-gray-500"><br><br>
             <label>Description:</label>
-            <input type="text" id="description" size="50"><br><br>
+            <input type="text" id="description" size="50" class="border-2 rounded-sm border-gray-500"><br><br>
             <label>Category:</label>
-            <select name="category" id="category_id">
-                <option value="1">vinyl</option>
+            <select name="category" id="category_id" class="border-2 rounded-sm border-gray-500">
+                <option value="1">Vinyl</option>
                 <option value="2">CD</option>
                 <option value="3">Cassette</option>
             </select>
             <label>Condition:</label>
-            <select name="condition" id="condition">
+            <select name="condition" id="condition" class="border-2 rounded-sm border-gray-500">
                 <option value="sealed">Sealed</option>
                 <option value="mint">Mint (M)</option>
                 <option value="near-mint">Near Mint (NM)</option>
@@ -51,16 +51,16 @@
                 <option value="poor">Poor (P)</option>          
             </select>
             <label>Price:</label>
-            <input type='number' id='price'><br><br>
-            <input type="submit" value="Submit">
+            <input type='number' id='price' class="border-2 rounded-sm border-gray-500"><br><br>
+            <input type="submit" value="Submit" class="font-medium hover:text-gray-400 border-2 rounded-sm border-gray-500">
         </form>
     </div><br>
 
-    <div id="main-list-title"></div>
+    <div id="main-list-title" class="mt-4"></div>
 
-    <div id="album-details"></div>
+    <div id="album-details" class="mt-4 border-2 rounded-sm border-gray-100 bg-gray-100"></div>
     
-    <div id="main-list"></div>
+    <div id="main-list" class="mt-4"></div>
     
     <script src="src/index.js"></script>
     <script src="src/album.js"></script>

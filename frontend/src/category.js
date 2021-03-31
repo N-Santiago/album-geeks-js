@@ -12,20 +12,21 @@ class Category {
     renderCategories() {
         return `
             <div>
-                <h3> ${this.name} </h3>
+                <h3 class="font-medium mt-4"> ${this.name}: </h3>
                 ${this.albums.length} albums
             </div>
         `
     } 
 
     // renderAlbums() {
-    //     this.albums.forEach(album => {
-    //         mainListEl().innerHTML += `
+    //     let i;
+    //     for (i = 0; i < this.length; i++) {
+    //         `
     //         <div>
-    //         <li id="album-${album.id}">
-    //         ${album.name} - ${album.artist} - Genre: ${album.genre}</small><button class="delete-btn" data-action="delete" id="delete-btn"> X </button></li>
+    //             <li id="album-${this.id}">
+    //             ${this.name} - ${this.artist} - Genre: ${this.genre}</small><button class="delete-btn" data-action="delete" id="delete-btn"> X </button></li>
     //         </div>
     //         `
-    //     })
+    //     }
     // }
 }

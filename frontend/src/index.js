@@ -13,13 +13,13 @@ const init = () => {
     bindNavListeners();
 };
   
-const getAlbums = () => {
+function getAlbums() {
     mainListEl.innerHTML = "<strong>Loading the albums...</strong>";
     fetch(BASE_URL+"/albums")
     .then((res) => res.json())
     .then((data) => {
         mainListEl.innerHTML = "";
-        mainListTitleEl.innerHTML = "<h2>Albums</h2>";
+        mainListTitleEl.innerHTML = "<h2 class=font-bold>Albums</h2>";
         data.forEach(albumObject => {
             const newAlbum = new Album(albumObject)
             mainListEl.innerHTML += newAlbum.renderAlbumsIndex()
@@ -35,7 +35,6 @@ const getAlbums = () => {
 
 function showAlbumDetails(e) {
     e.preventDefault()
-    console.log('showing album details')
     const { id } = e.target.dataset;
     fetch(`http://localhost:3000/albums/${id}`)
       .then((res) => res.json())
@@ -56,13 +55,13 @@ function deleteAlbum(e) {
     });
 }
 
-const getCategories = () => {
+function getCategories() {
     mainListEl.innerHTML = "<strong>Loading...</strong>";
     fetch(BASE_URL+"/categories")
     .then((res) => res.json())
     .then((data) => {
         mainListEl.innerHTML = "";
-        mainListTitleEl.innerHTML = "<h2>Categories</h2>";
+        mainListTitleEl.innerHTML = "<h2 class=font-bold>Categories</h2>";
         data.forEach(categoryObject => {
             const newCat = new Category(categoryObject)
             mainListEl.innerHTML += newCat.renderCategories()
