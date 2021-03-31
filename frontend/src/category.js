@@ -4,10 +4,6 @@ class Category {
         this.name = dataObject.name
         this.albums = dataObject.albums
     }
-    
-    formatPrice() {
-        return `$${this.price}`;
-    }
 
     renderCategories() {
         return `

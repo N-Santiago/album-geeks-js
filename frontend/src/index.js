@@ -12,6 +12,15 @@ const init = () => {
     bindAlbumFormEventListener();
     bindNavListeners();
 };
+
+function albumLinks() {
+    document
+            .querySelectorAll(".album-link")
+            .forEach((link) => link.addEventListener("click", showAlbumDetails));
+    document 
+            .querySelectorAll(".delete-btn")
+            .forEach((btn) => btn.addEventListener("click", deleteAlbum))
+}
   
 function getAlbums() {
     mainListEl.innerHTML = "<strong>Loading the albums...</strong>";
@@ -24,24 +33,14 @@ function getAlbums() {
             const newAlbum = new Album(albumObject)
             mainListEl.innerHTML += newAlbum.renderAlbumsIndex()
         })
-        document
-            .querySelectorAll(".album-link")
-            .forEach((link) => link.addEventListener("click", showAlbumDetails));
-        document 
-            .querySelectorAll(".delete-btn")
-            .forEach((btn) => btn.addEventListener("click", deleteAlbum))
+        albumLinks()
     })
 }
 
 function showAlbumDetails(e) {
-    e.preventDefault()
-    const { id } = e.target.dataset;
-    fetch(`http://localhost:3000/albums/${id}`)
-      .then((res) => res.json())
-      .then((album) => {
-        const newAlbum = new Album(album);
-        albumDetailEl.innerHTML = newAlbum.renderAlbumDetail();
-      });
+    const { id } = e.target.dataset; 
+    const foundAlbum = Album.all.find(album => album.id == id) 
+    albumDetailEl.innerHTML = foundAlbum.renderAlbumDetail();
   }
 
 function deleteAlbum(e) {
@@ -66,12 +65,6 @@ function getCategories() {
             const newCat = new Category(categoryObject)
             mainListEl.innerHTML += newCat.renderCategories()
         })
-        document
-            .querySelectorAll(".album-link")
-            .forEach((link) => link.addEventListener("click", showAlbumDetails));
-        document 
-            .querySelectorAll(".delete-btn")
-            .forEach((btn) => btn.addEventListener("click", deleteAlbum))
     })
 }
 
@@ -88,7 +81,7 @@ function submitAlbum(data) {
     .then((album) => {
         const newAlbum = new Album(album)
         mainListEl.innerHTML += newAlbum.renderAlbumsIndex()
-       init()
+        albumLinks()
     }) 
 }
 

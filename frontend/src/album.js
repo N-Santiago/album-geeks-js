@@ -1,4 +1,5 @@
 class Album {
+    static all = []
     constructor(dataObject) {
         this.id = dataObject.id
         this.name = dataObject.name
@@ -8,6 +9,8 @@ class Album {
         this.description = dataObject.description
         this.price = dataObject.price 
         this.category_id = dataObject.category_id
+        this.category_name = dataObject.category_name
+        Album.all.push(this)
     }
     
     formatPrice() {
@@ -22,6 +25,7 @@ class Album {
             by ${this.artist}</p>
             <p>Genre: ${this.genre}<br>
             Condition: ${this.condition}<br>
+            Category: ${this.category_name}<br>
             Description: ${this.description}<br>
             Price: ${this.formatPrice()}</p>
         </div>
