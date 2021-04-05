@@ -2,10 +2,11 @@ const BASE_URL = "http://localhost:3000";
 const mainListEl = document.getElementById("main-list");
 const mainListTitleEl = document.getElementById("main-list-title");
 const albumEl = document.getElementById("album-list")
-const albumForm = document.getElementById("form-container")
+const albumForm = document.getElementById("new-album")
 const albumsNavEl = document.getElementById("albums-nav");
 const categoriesNavEl = document.getElementById("categories-nav");
 const albumDetailEl = document.getElementById("album-details")
+const expensiveAlbumsEl = document.getElementById("expensive-albums")
 
 const init = () => {
     getAlbums();
@@ -105,12 +106,33 @@ function bindAlbumFormEventListener() {
             price,
         };
         submitAlbum(data)
+        albumForm.reset()
     })
+}
+
+// function clearAlbumForm() {
+//     document.getElementById("name").value=''
+//     document.getElementById("artist").value=''
+//     document.getElementById("genre").value=''
+//     document.getElementById("category_id").value='1'
+//     document.getElementById("condition").value='sealed'
+//     document.getElementById("description").value=''
+//     document.getElementById("price").value=''
+// }
+
+function getExpensiveAlbums() {
+    const expensive = Album.all.filter(album => album.price > 35.00)
+    mainListEl.innerHTML = ""; 
+    expensive.forEach(albumObject => {   
+        mainListEl.innerHTML += albumObject.renderAlbumsIndex()
+    })
+    albumLinks()
 }
 
 function bindNavListeners() {
     albumsNavEl.addEventListener("click", getAlbums);
     categoriesNavEl.addEventListener("click", getCategories);
+    expensiveAlbumsEl.addEventListener("click", getExpensiveAlbums);
 }
 
 // Have to call init in order to get what I'm calling inside of it. 
