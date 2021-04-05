@@ -110,16 +110,6 @@ function bindAlbumFormEventListener() {
     })
 }
 
-// function clearAlbumForm() {
-//     document.getElementById("name").value=''
-//     document.getElementById("artist").value=''
-//     document.getElementById("genre").value=''
-//     document.getElementById("category_id").value='1'
-//     document.getElementById("condition").value='sealed'
-//     document.getElementById("description").value=''
-//     document.getElementById("price").value=''
-// }
-
 function getExpensiveAlbums() {
     const expensive = Album.all.filter(album => album.price > 35.00)
     mainListEl.innerHTML = ""; 
