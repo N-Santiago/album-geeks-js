@@ -1,5 +1,5 @@
 class AlbumSerializer < ActiveModel::Serializer
-  attributes :id, :name, :artist, :genre, :condition, :description, :price, :category_name, :category_id, :image_format
+  attributes :id, :name, :artist, :image_format, :genre, :condition, :description, :price, :category_name, :category_id 
 
   def image_format
     return unless object.image.attached?
