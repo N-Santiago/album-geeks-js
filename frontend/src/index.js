@@ -1,12 +1,13 @@
 const BASE_URL = "http://localhost:3000";
 const mainListEl = document.getElementById("main-list");
 const mainListTitleEl = document.getElementById("main-list-title");
-const albumEl = document.getElementById("album-list")
-const albumForm = document.getElementById("new-album")
+const albumEl = document.getElementById("album-list");
+const albumForm = document.getElementById("new-album");
 const albumsNavEl = document.getElementById("albums-nav");
 const categoriesNavEl = document.getElementById("categories-nav");
-const albumDetailEl = document.getElementById("album-details")
-const expensiveAlbumsEl = document.getElementById("expensive-albums")
+const albumDetailEl = document.getElementById("album-details");
+const expensiveAlbumsEl = document.getElementById("expensive-albums");
+const image = document.querySelector("album-form");
 
 const init = () => {
     getAlbums();
@@ -76,7 +77,7 @@ function submitAlbum(data) {
             Accept: "application/json",
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({ album: data }),
+        body: JSON.stringify({ album: data })
     })
     .then((res) => res.json())
     .then((album) => {
@@ -86,11 +87,13 @@ function submitAlbum(data) {
     }) 
 }
 
-function bindAlbumFormEventListener() {
+function bindAlbumFormEventListener(form) {
     albumForm.addEventListener("submit", function(e) {
         e.preventDefault()
         const name = document.getElementById("name").value
         const artist = document.getElementById("artist").value
+        // const formData = new FormData(form);
+        // const image = document.getElementById("image").value
         const genre = document.getElementById("genre").value
         const category_id = document.getElementById("category_id").value
         const condition = document.getElementById("condition").value
@@ -99,6 +102,8 @@ function bindAlbumFormEventListener() {
         const data = {
             name,
             artist,
+            // formData,
+            // image,
             genre,
             category_id,
             condition,
@@ -127,3 +132,8 @@ function bindNavListeners() {
 
 // Have to call init in order to get what I'm calling inside of it. 
 init()
+
+
+// Check the following documentation for other options:
+// https://mattenbar.github.io/how_to_add_photos_to_your_js_web_app_with_rails_api-backend
+

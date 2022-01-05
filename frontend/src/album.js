@@ -19,7 +19,7 @@ class Album {
 
     renderAlbumDetail() {
         return `
-        <div>
+        <div class="bg-gray-200">
             <h3 class="font-bold">Album Description:</h3>
             <p class="font-medium">${this.name}<br>
             by ${this.artist}</p>
