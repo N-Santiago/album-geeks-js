@@ -7,12 +7,12 @@ require 'faker'
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-#Creaate Categories
-# categories = ['Vynil', 'CD', 'Cassette']
+# Create Categories
+categories = ['Vynil', 'CD', 'Cassette']
 
-# categories.each do |c|
-#     Category.create(name: c)
-# end 
+categories.each do |c|
+    Category.create(name: c)
+end 
 
 #Use Faker
 # 10.times do 

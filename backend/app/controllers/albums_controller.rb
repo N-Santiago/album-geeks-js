@@ -30,10 +30,15 @@ class AlbumsController < ApplicationController
         end
     end 
 
+    def img
+        file_url = Cloudinary::Uploader.upload(params[:file], options = {})
+    end 
+
+
     private
 
     def album_params
-        params.require(:album).permit(:name, :artist, :genre, :condition, :description, :price, :category_id)
+        params.require(:album).permit(:name, :artist, :genre, :condition, :description, :price, :img, :category_id)
     end
     
 end

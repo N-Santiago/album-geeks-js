@@ -2,6 +2,7 @@ class Album {
     static all = []
     constructor(dataObject) {
         this.id = dataObject.id
+        this.img = dataObject.img
         this.name = dataObject.name
         this.artist = dataObject.artist
         this.genre = dataObject.genre 
@@ -35,7 +36,7 @@ class Album {
     renderAlbumsIndex() {
         return `
             <div class="mt-4">
-                <a  href="#"><h3 data-id=${this.id} class="font-medium hover:text-gray-400 album-link">${this.name}<br>
+                <a  href="#"><h3 data-id=${this.id} class="font-medium hover:text-gray-400 album-link"><img src=${this.img}<br>${this.name}<br>
                 by ${this.artist}</h3></a><button data-id=${this.id} type="button" class="delete-btn hover:bg-gray-100 text-red-800 font-semibold py-1 px-2 border border-red-400 rounded shadow">Bought</button>
             </div>
         `
