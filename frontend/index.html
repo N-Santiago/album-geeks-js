@@ -23,7 +23,7 @@
     
     <div id="form-container" class="bg-gray-200 p-1 mt-2 border-2 rounded-sm ">
         <h3 class="font-bold">Add Album</h3>
-        <form id="new-album" class="album-form ">
+        <form id="new-album" enctype="multipart/form-data" class="album-form ">
             <label>Title:</label>
             <input type="text" id="name" class="border-2 rounded-sm border-gray-500">
             <label>Artist:</label>
@@ -54,12 +54,13 @@
             </select>
             <label>Price:</label>
             <input type='number' id='price' class="border-2 rounded-sm border-gray-500"><br><br>
-            <input type="submit" class="btn btn-info btn-md" class="font-medium hover:text-gray-400 border-2 rounded-sm border-gray-500">
+            <input type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 border border-red-700 rounded">
+        </form>
         </form>
     </div><br>
 
     <div id="expensive-albums">
-        <input type="button" value="Expensive Albums" class="font-medium hover:text-gray-400 border-2 rounded-sm border-gray-500">
+        <input type="button" value="Expensive Albums" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 border border-red-700 rounded">
     </div>
 
     <div id="main-list-title" class="mt-4"></div>

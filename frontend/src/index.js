@@ -116,7 +116,7 @@ function bindAlbumFormEventListener() {
         })
         const name = document.getElementById("name").value
         const artist = document.getElementById("artist").value
-        const img = document.getElementById("img").src
+        const img = document.getElementById("img").src 
         const genre = document.getElementById("genre").value
         const category_id = document.getElementById("category_id").value
         const condition = document.getElementById("condition").value
