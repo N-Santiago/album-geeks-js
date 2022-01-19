@@ -15,10 +15,7 @@ class AlbumsController < ApplicationController
         if album.save
           render json: album
         else
-            render json: {
-                error: "Album cannot be created",
-                status: 500
-            } 
+            render json: album, status: 500
         end
     end
 

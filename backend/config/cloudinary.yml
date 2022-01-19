@@ -1,0 +1,11 @@
+development: 
+  cloud_name: "dwflooyh2"
+  api_key: "512834429511467"
+  api_secret: "lr_yuJcRzCj-y_K2YStsfE3cJag"
+  secure: true
+
+production:
+  cloud_name: "dwflooyh2"
+  api_key: "512834429511467"
+  api_secret: "lr_yuJcRzCj-y_K2YStsfE3cJag"
+  secure:true
