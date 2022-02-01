@@ -23,7 +23,7 @@
     
     <div id="form-container" class="bg-gray-200 p-1 mt-2 border-2 rounded-sm ">
         <h3 class="font-bold">Add Album</h3>
-        <form id="new-album" class="album-form ">
+        <form id="new-album" enctype="multipart/form-data" class="album-form ">
             <label>Title:</label>
             <input type="text" id="name" class="border-2 rounded-sm border-gray-500">
             <label>Artist:</label>
@@ -31,7 +31,7 @@
             <label>Genre:</label>
             <input type='text' id='genre' class="border-2 rounded-sm border-gray-500"><br><br>
             <label>Image:</label>
-            <input type='file' id='image' accept='image/*' enctype="multipart/form-data" class="border-2 rounded-sm border-gray-500"/><br /><br />
+            <input type='file' id='image' accept='image/*' class="border-2 rounded-sm border-gray-500"/><br /><br />
             <label>Description:</label>
             <input type="text" id="description" size="50" class="border-2 rounded-sm border-gray-500"><br><br>
             <label>Category:</label>
@@ -71,5 +71,8 @@
     <script src="src/index.js"></script>
     <script src="src/album.js"></script>
     <script src="src/category.js"></script>
+    <footer>
+        © <script>document.write(new Date().getFullYear())</script> | Norberto Santiago 
+    </footer>
 </body>
 </html>

@@ -56,6 +56,22 @@ body {
   height: 100%;
 }
 
+/* footer {
+  border-top: 1px solid #e5e5e5;
+  padding: 45px 0;
+  width: '100%',
+  position: fixed,
+  bottom: 0;
+} */
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
 /**
 Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
 */

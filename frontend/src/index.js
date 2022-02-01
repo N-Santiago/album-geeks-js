@@ -7,7 +7,6 @@ const albumsNavEl = document.getElementById("albums-nav");
 const categoriesNavEl = document.getElementById("categories-nav");
 const albumDetailEl = document.getElementById("album-details");
 const expensiveAlbumsEl = document.getElementById("expensive-albums");
-const image = document.querySelector("album-form");
 
 const init = () => {
     getAlbums();
@@ -87,13 +86,12 @@ function submitAlbum(data) {
     }) 
 }
 
-function bindAlbumFormEventListener(form) {
+function bindAlbumFormEventListener() {
     albumForm.addEventListener("submit", function(e) {
         e.preventDefault()
         const name = document.getElementById("name").value
         const artist = document.getElementById("artist").value
-        // const formData = new FormData(form);
-        // const image = document.getElementById("image").value
+        const image = document.getElementById("image").value
         const genre = document.getElementById("genre").value
         const category_id = document.getElementById("category_id").value
         const condition = document.getElementById("condition").value
@@ -102,8 +100,7 @@ function bindAlbumFormEventListener(form) {
         const data = {
             name,
             artist,
-            // formData,
-            // image,
+            image,
             genre,
             category_id,
             condition,
