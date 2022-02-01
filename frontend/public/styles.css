@@ -56,20 +56,13 @@ body {
   height: 100%;
 }
 
-/* footer {
-  border-top: 1px solid #e5e5e5;
-  padding: 45px 0;
-  width: '100%',
-  position: fixed,
-  bottom: 0;
-} */
-
 footer {
   position: fixed;
-  left: 0;
+  /* left: 0; */
   bottom: 0;
-  width: 100%;
-  text-align: center;
+  width: 60%;
+  margin: auto; 
+  /* text-align: center; */
 }
 
 /**
