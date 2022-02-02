@@ -91,7 +91,6 @@ function bindAlbumFormEventListener() {
         e.preventDefault()
         const name = document.getElementById("name").value
         const artist = document.getElementById("artist").value
-        const image = document.getElementById("image").value
         const genre = document.getElementById("genre").value
         const category_id = document.getElementById("category_id").value
         const condition = document.getElementById("condition").value
@@ -100,7 +99,6 @@ function bindAlbumFormEventListener() {
         const data = {
             name,
             artist,
-            image,
             genre,
             category_id,
             condition,

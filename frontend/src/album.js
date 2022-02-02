@@ -36,7 +36,7 @@ class Album {
         return `
             <div class="mt-4">
                 <a  href="#"><h3 data-id=${this.id} class="font-medium hover:text-gray-400 album-link">${this.name}<br>
-                by ${this.artist}</h3></a><button data-id=${this.id} type="button" class="delete-btn hover:bg-gray-100 text-red-800 font-semibold py-1 px-2 border border-red-400 rounded shadow">Bought</button>
+                by ${this.artist}</h3></a><button data-id=${this.id} type="button" class="delete-btn bg-red-500 hover:bg-red-700 text-white font-medium py-1 px-2 border border-red-700 rounded">Bought</button>
             </div>
         `
     } 
