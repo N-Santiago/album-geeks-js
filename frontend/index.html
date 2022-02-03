@@ -8,18 +8,13 @@
     <link rel="stylesheet" href="public/styles.css">
 </head>
 <body>
-    <div id="heading" class="font-bold text-xl text-white p-4 bg-red-700">
-        <h1>Album Geeks</h1>
-    </div>
-
-    <div id="nav-container">
-        <a href="#" id="albums-nav" class="font-medium hover:text-gray-400">
-            Albums
-        </a> |
-        <a href="#" id="categories-nav" class="font-medium hover:text-gray-400">
-            Categories
-        </a>
-    </div>
+    <div id="heading" class="flex p-4 bg-red-700">
+        <div class="brand text-white font-bold text-xl">Album Geeks</div>
+        <div id="nav-container" class="origin-top-right absolute right-80 text-white">
+            <a href="#" id="albums-nav" class="font-medium hover:text-red-100">Albums</a> |
+            <a href="#" id="categories-nav" class="font-medium hover:text-red-100">Categories</a>
+        </div>
+    </div>    
     
     <div id="form-container" class="bg-gray-200 p-1 mt-2 border-2 rounded-sm ">
         <h3 class="font-bold">Add Album</h3>
@@ -52,17 +47,17 @@
             </select>
             <label>Price:</label>
             <input type='number' id='price' class="border-2 rounded-sm border-gray-500"><br><br>
-            <input type="submit" id="submit" value="Submit" class="bg-red-500 hover:bg-red-700 text-white font-medium py-2 px-4 border border-red-700 rounded">
+            <input type="submit" id="submit" value="Submit" class="bg-red-500 hover:bg-red-700 text-white py-1 px-2 border border-red-700 rounded">
         </form>
     </div><br>
 
-    <div id="expensive-albums">
-        <input type="button" value="Expensive Albums" class="bg-red-500 hover:bg-red-700 text-white font-medium py-2 px-4 border border-red-700 rounded">
-    </div>
+    <div id="album-details" class="mt-4 border-2 rounded-sm border-gray-100 bg-gray-100"></div>
 
     <div id="main-list-title" class="mt-4"></div>
 
-    <div id="album-details" class="mt-4 border-2 rounded-sm border-gray-100 bg-gray-100"></div>
+    <div id="expensive-albums">
+        <input type="button" value="Expensive Albums" class="mt-4 bg-red-500 hover:bg-red-700 text-white py-1 px-2 border border-red-700 rounded">
+    </div>
     
     <div id="main-list" class="mt-4"></div>
     

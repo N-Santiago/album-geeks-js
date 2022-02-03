@@ -39,6 +39,11 @@ html {
   min-height: 100%;
 }
 
+@font-face {
+  font-family: "ImpactLabelReversed";
+  src: url("Fonts/ImpactLabelReversed.ttf");
+}
+
 /*
 Sections
 ========
@@ -77,6 +82,10 @@ body {
 		sans-serif,
 		'Apple Color Emoji',
 		'Segoe UI Emoji';
+}
+
+.brand {
+  font-family: "ImpactLabelReversed";
 }
 
 /*
