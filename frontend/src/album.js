@@ -4,6 +4,8 @@ class Album {
         this.id = dataObject.id
         this.name = dataObject.name
         this.artist = dataObject.artist
+        this.image_url = dataObject.image_url
+        this.video_url = dataObject.video_url
         this.genre = dataObject.genre 
         this.condition = dataObject.condition
         this.description = dataObject.description
@@ -34,9 +36,9 @@ class Album {
 
     renderAlbumsIndex() {
         return `
-            <div class="mt-4">
+            <div class="mt-4 border-t-2 border-red-700 flex-auto justify-center">
                 <a  href="#"><h3 data-id=${this.id} class="font-medium hover:text-gray-400 album-link">${this.name}<br>
-                by ${this.artist}</h3></a><button data-id=${this.id} type="button" class="delete-btn bg-red-500 hover:bg-red-700 text-white py-1 px-2 border border-red-700 rounded">Bought</button>
+                by ${this.artist}</h3><img src=${this.image_url} onerror="src='./images/noimage.jpeg'" alt="Image Not Available" style="width:250px" /><br><button data-id=${this.id} type="button" class="delete-btn bg-red-500 hover:bg-red-700 text-white py-1 px-2 border border-red-700 rounded">Buy</button>
             </div>
         `
     } 

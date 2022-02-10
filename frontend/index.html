@@ -20,9 +20,13 @@
         <h3 class="font-bold">Add Album</h3>
         <form id="new-album" enctype="multipart/form-data" class="album-form ">
             <label>Title:</label>
-            <input type="text" id="name" class="border-2 rounded-sm border-gray-500">
+            <input type="text" id="name" class="border-2 rounded-sm border-gray-500" required>
             <label>Artist:</label>
-            <input type="text" id="artist" class="border-2 rounded-sm border-gray-500">
+            <input type="text" id="artist" class="border-2 rounded-sm border-gray-500" required>
+            <label>Image_URL:</label>
+            <input type="text" id="image_url" class="border-2 rounded-sm border-gray-500"><br><br>
+            <label>Video_URL:</label>
+            <input type="text" id="video_url" class="border-2 rounded-sm border-gray-500">
             <label>Genre:</label>
             <input type='text' id='genre' class="border-2 rounded-sm border-gray-500"><br><br>
             <label>Description:</label>
@@ -46,7 +50,7 @@
                 <option value="poor">Poor (P)</option>          
             </select>
             <label>Price:</label>
-            <input type='number' id='price' class="border-2 rounded-sm border-gray-500"><br><br>
+            <input type='number' id='price' class="border-2 rounded-sm border-gray-500" required><br><br>
             <input type="submit" id="submit" value="Submit" class="bg-red-500 hover:bg-red-700 text-white py-1 px-2 border border-red-700 rounded">
         </form>
     </div><br>
@@ -59,7 +63,7 @@
         <input type="button" value="Expensive Albums" class="mt-4 bg-red-500 hover:bg-red-700 text-white py-1 px-2 border border-red-700 rounded">
     </div>
     
-    <div id="main-list" class="mt-4 pb-20"></div>
+    <div id="main-list" class="flex flex-wrap space-x-4 mt-4 pb-20"></div>
     
     <footer class="text-center p-6 bg-gray-200 ">
         © <script>document.write(new Date().getFullYear())</script> | Norberto Santiago 
