@@ -3,6 +3,8 @@ class CreateAlbums < ActiveRecord::Migration[6.0]
     create_table :albums do |t|
       t.string :name
       t.string :artist
+      t.string :image_url
+      t.string :video_url
       t.string :genre
       t.string :condition
       t.string :description

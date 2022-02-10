@@ -7,8 +7,8 @@ require 'faker'
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-#Creaate Categories
-# categories = ['Vynil', 'CD', 'Cassette']
+# Creaate Categories
+# categories = ['Vinyl', 'CD', 'Cassette']
 
 # categories.each do |c|
 #     Category.create(name: c)
@@ -19,8 +19,13 @@ require 'faker'
 #     Album.create(name: Faker::Music.album, artist: Faker::Music.band, category_id: 1, condition: "Sealed", description: "Repressing", price: rand() * 100)
 # end 
 
+
 #update albums with their genre
 # Album.all.each do |a|
-#     a.update(genre: "Rock") 
+#     a.update(genre: "Rock & Pop") 
+# end 
+
+# Album.all.each do |a|
+#     a.update(category_id: 1)
 # end 
 
