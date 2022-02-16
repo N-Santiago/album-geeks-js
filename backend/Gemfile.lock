@@ -165,7 +165,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  actionpack
+  actionpack (>= 6.0.3.5)
   active_model_serializers
   bootsnap (>= 1.4.2)
   byebug
