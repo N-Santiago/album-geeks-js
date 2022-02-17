@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 2021_03_07_183417) do
   create_table "albums", force: :cascade do |t|
     t.string "name"
     t.string "artist"
-    t.string "image_url"
-    t.string "video_url"
+    t.string "front_url"
+    t.string "back_url"
     t.string "genre"
     t.string "condition"
     t.string "description"

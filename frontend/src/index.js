@@ -91,8 +91,8 @@ function bindAlbumFormEventListener() {
         e.preventDefault()
         const name = document.getElementById("name").value
         const artist = document.getElementById("artist").value
-        const image_url = document.getElementById("image_url").value
-        const video_url = document.getElementById("video_url").value
+        const front_url = document.getElementById("front_url").value
+        const back_url = document.getElementById("back_url").value
         const genre = document.getElementById("genre").value
         const category_id = document.getElementById("category_id").value
         const condition = document.getElementById("condition").value
@@ -101,8 +101,8 @@ function bindAlbumFormEventListener() {
         const data = {
             name,
             artist,
-            image_url,
-            video_url,
+            front_url,
+            back_url,
             genre,
             category_id,
             condition,
