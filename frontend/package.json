@@ -3,9 +3,10 @@
         "build-css": "tailwindcss build styles.css -o public/styles.css"
     },
     "dependencies": {
+        "postcss": "^8.4.6",
         "tailwindcss": "^2.0.4"
     },
     "devDependencies": {
-        "stylelint-config-recommended": "^4.0.0"
+        "stylelint-config-recommended": "^7.0.0"
     }
 }
