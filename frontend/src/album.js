@@ -21,7 +21,7 @@ class Album {
 
     renderAlbumDetail() {
         return `
-        <div class="bg-gray-100 flex flex-wrap space-x-4 mt-4 pb-5 justify-center">
+        <div class="bg-gray-100 flex flex-auto space-x-4 mt-4 pb-5 justify-center">
             <div>
                 <h3 class="font-bold">Album Description:</h3>
                 <p class="font-medium">${this.name}<br>
@@ -38,7 +38,6 @@ class Album {
             <div>
                 <img data-id=${this.id} src=${this.back_url} onerror="src='./images/noimage.jpeg'" alt="Image Not Available" style="width:250px" />
             </div>
-            
         </div>
         `
     }
