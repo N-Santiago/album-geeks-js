@@ -29,4 +29,4 @@ Everyone interacting in the album geeks project’s codebases, issue trackers, c
 
 © 2021 Album Geeks
 
-<a href="https://icons8.com/icon/GObamiv1ZJcC/album">Album icon by Icons8</a>
+<a href="https://icons8.com/icon/GObamiv1ZJcC/album">Records and JavaScript icons by Icons8</a>
