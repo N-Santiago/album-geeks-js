@@ -1,6 +1,6 @@
 # README
 
-# Album Geeks Javascript Project <a href="https://icons8.com/icon/GObamiv1ZJcC/album">Album icon by Icons8</a>
+# Album Geeks Javascript Project <img src="https://img.icons8.com/external-microdots-premium-microdot-graphic/64/000000/external-album-music-instrument-vol1-microdots-premium-microdot-graphic.png"/>
 This project is inspired by my love of music and records. 
 
 ## Setup
@@ -23,3 +23,5 @@ Available as open source under the terms of the MIT License.
 Everyone interacting in the album geeks project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the code of conduct.
 
 © 2021 Album Geeks
+
+<a href="https://icons8.com/icon/GObamiv1ZJcC/album">Album icon by Icons8</a>
