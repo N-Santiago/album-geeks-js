@@ -15,7 +15,7 @@ Add new records and keep in mind there's three categories: vinyl <img src="https
 
 ## Video Demo
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/cpega2gO6/0.jpg)](https://www.youtube.com/watch?v=cpega2gO6)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/cpega2gO6as/0.jpg)](https://www.youtube.com/watch?v=cpega2gO6as)
 
 
 ## Contributing
