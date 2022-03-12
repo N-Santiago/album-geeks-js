@@ -1,6 +1,6 @@
 # README
 
-# Album Geeks Javascript Project
+# Album Geeks Javascript Project <a href="https://icons8.com/icon/GObamiv1ZJcC/album">Album icon by Icons8</a>
 This project is inspired by my love of music and records. 
 
 ## Setup
