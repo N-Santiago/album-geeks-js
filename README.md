@@ -1,7 +1,7 @@
 # README
 
 # Album Geeks <img src="https://img.icons8.com/external-dreamstale-green-shadow-dreamstale/24/000000/external-vinyl-technology-dreamstale-green-shadow-dreamstale.png"/>
-This JavaScript <img src="https://img.icons8.com/color/16/000000/javascript--v1.png"/> project is inspired by my love of music :notes: and records <img src="https://img.icons8.com/external-those-icons-lineal-color-those-icons/16/000000/external-vinyl-music-audio-those-icons-lineal-color-those-icons.png"/>. 
+This JavaScript <img src="https://img.icons8.com/color/20/000000/javascript--v1.png"/> project is inspired by my love of music :notes: and records <img src="https://img.icons8.com/external-those-icons-lineal-color-those-icons/16/000000/external-vinyl-music-audio-those-icons-lineal-color-those-icons.png"/>. 
 
 ## Setup
 These are the steps to get the app up and running:
