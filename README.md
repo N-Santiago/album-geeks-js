@@ -1,6 +1,6 @@
 # README
 
-# Album Geeks Javascript Project <img src="https://img.icons8.com/external-microdots-premium-microdot-graphic/64/000000/external-album-music-instrument-vol1-microdots-premium-microdot-graphic.png"/>
+# Album Geeks Javascript Project <img src="https://img.icons8.com/external-those-icons-lineal-color-those-icons/48/000000/external-vinyl-music-audio-those-icons-lineal-color-those-icons.png"/>
 This project is inspired by my love of music and records. 
 
 ## Setup
