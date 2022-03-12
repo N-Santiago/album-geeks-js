@@ -1,7 +1,7 @@
 # README
 
-# Album Geeks Javascript Project <img src="https://img.icons8.com/external-those-icons-lineal-color-those-icons/24/000000/external-vinyl-music-audio-those-icons-lineal-color-those-icons.png"/>
-This project is inspired by my love of music :notes: and records <img src="https://img.icons8.com/external-dreamstale-green-shadow-dreamstale/16/000000/external-vinyl-technology-dreamstale-green-shadow-dreamstale.png"/>. 
+# Album Geeks Javascript Project <img src="https://img.icons8.com/external-dreamstale-green-shadow-dreamstale/24/000000/external-vinyl-technology-dreamstale-green-shadow-dreamstale.png"/>
+This project is inspired by my love of music :notes: and records <img src="https://img.icons8.com/external-those-icons-lineal-color-those-icons/16/000000/external-vinyl-music-audio-those-icons-lineal-color-those-icons.png"/>. 
 
 ## Setup
 These are the steps to get the app up and running:
@@ -11,7 +11,12 @@ Step 1. Clone this repository Make a local copy of this project and move into th
 ```$ git clone git@github.com:https://github.com/N-Santiago/album-geeks-js.git``` 
 
 ## Usage
-Add new records and keep in mind there's three categories: vinyl <img src="https://img.icons8.com/fluency-systems-filled/16/000000/music-record.png"/>, CD, <img src="https://img.icons8.com/ios-glyphs/16/000000/cd--v1.png"/> and cassettes <img src="https://img.icons8.com/external-those-icons-lineal-color-those-icons/16/000000/external-cassette-music-audio-those-icons-lineal-color-those-icons-1.png"/>. Just like your local record store.
+Add new records and keep in mind there's three categories: vinyl <img src="https://img.icons8.com/fluency-systems-filled/16/000000/music-record.png"/>, CD <img src="https://img.icons8.com/ios-glyphs/16/000000/cd--v1.png"/>, and cassettes <img src="https://img.icons8.com/external-those-icons-lineal-color-those-icons/16/000000/external-cassette-music-audio-those-icons-lineal-color-those-icons-1.png"/>. Just like your local record store.
+
+## Video Demo
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/cpega2gO6/0.jpg)](https://www.youtube.com/watch?v=cpega2gO6)
+
 
 ## Contributing
 Bug reports and pull requests are welcome on GitHub. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the Contributor Covenant code of conduct.
