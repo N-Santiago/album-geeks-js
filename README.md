@@ -1,6 +1,6 @@
 # README
 
-# Album Geeks Javascript Project <img src="https://img.icons8.com/external-those-icons-lineal-color-those-icons/48/000000/external-vinyl-music-audio-those-icons-lineal-color-those-icons.png"/>
+# Album Geeks Javascript Project <img src="https://img.icons8.com/external-those-icons-lineal-color-those-icons/24/000000/external-vinyl-music-audio-those-icons-lineal-color-those-icons.png"/>
 This project is inspired by my love of music and records. 
 
 ## Setup
