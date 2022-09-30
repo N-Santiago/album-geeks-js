@@ -129,7 +129,7 @@ function bindNavListeners() {
     expensiveAlbumsEl.addEventListener("click", getExpensiveAlbums);
 }
 
-// Have to call init in order to get what I'm calling inside of it. 
+// Have to call init in order to initialize the methods inside of it. 
 init()
 
 
