@@ -27,6 +27,4 @@ Available as open source under the terms of the MIT License.
 ## Code of Conduct
 Everyone interacting in the album geeks project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the code of conduct.
 
-© 2021 Album Geeks
-
 <a href="https://icons8.com/icon/GObamiv1ZJcC/album">Records and JavaScript icons by Icons8</a>
